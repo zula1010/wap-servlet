@@ -1,3 +1,4 @@
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 <%--
   Created by IntelliJ IDEA.
   User: julia
@@ -11,6 +12,16 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <form action="logged" method="post">
+    Username : <input name = "username" value="${cookie.username.value}" /><br />
+    Password: <input name = "password" type="password" /><br/>
+    Remember me <input type="checkbox"
+                       <%--<c:if test="{userCookie.containsKey('name')}">--%>
+                       <%--</c:if>--%>
+                         checked name ="check" value = "no" />
+                       <br />
+    <input type = "submit" />
+
+  </form>
   </body>
 </html>
